@@ -138,11 +138,11 @@
         background-image: url('./card-example-6.jpeg');
         grid-area: d;
 
-        button {
+        
+    }
+    .d button {
             background-color: rgb(44, 111, 255);
         }
-    }
-
     .e {
         grid-area: e;
         justify-content: space-between;

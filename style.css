@@ -1,0 +1,211 @@
+ 
+    body {
+        width: 100vw;
+        height: 100vh;
+        overflow-x: hidden;
+        display: flex;
+        align-items: center;
+        background-color: black;
+    }
+
+    main {
+        margin: auto;
+        width: 90vw;
+    }
+
+    section {
+        height: fit-content;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+            "a b c "
+            " d e e";
+        gap: 1rem;
+    }
+
+    div {
+        min-height: 40vh;
+        display: flex;
+        flex-direction: column;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        color: white;
+        border-radius: 1rem;
+
+        article {
+            display: flex;
+            flex-direction: column;
+        }
+
+        b {
+            padding: 1rem 1rem 1rem;
+            opacity: 0.7;
+
+        }
+
+        strong {
+            font-size: 1.5em;
+            padding: 0rem 1rem 1rem 1rem;
+        }
+
+        span {
+            border-radius: 0rem 0rem 1rem 1rem;
+            padding: 0.5rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            position: relative;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 -10px 10px -5px rgba(255, 255, 255, 0.175);
+
+            p {
+                flex: 2;
+            }
+
+            svg {
+                flex: 0.5;
+            }
+
+            button {
+                flex: 0.5;
+                width: 6rem;
+                padding: 10px 5px;
+                border-radius: 1rem;
+                background-color: rgba(255, 255, 255, 0.266);
+                color: white;
+                border: none;
+                cursor: pointer;
+
+                & :hover {
+                    opacity: 0.9;
+                }
+            }
+
+
+        }
+    }
+ 
+
+    /* 
+    div:nth-child(1) { 
+        background-image: url('./card-example-4.jpeg');
+    }
+
+    div:nth-child(2) {
+        background-image: url('./card-example-3.jpeg'); 
+    }
+
+    div:nth-child(3) {
+        background-image: url('./card-example-2.jpeg'); 
+    }
+
+    div:nth-child(4) {
+        background-image: url('./card-example-6.jpeg'); 
+        justify-content: space-between;
+
+        button {
+            background-color: rgb(44, 111, 255);
+        }
+    }
+
+    div:nth-child(5) {
+        justify-content: space-between;
+        background-image: url('./card-example-5.jpeg'); 
+    } */
+
+
+
+    .a {
+        background-image: url('./card-example-4.jpeg');
+        grid-area: a;
+    }
+
+    .b {
+        background-image: url('./card-example-3.jpeg');
+        grid-area: b;
+    }
+
+    .c {
+        background-image: url('./card-example-2.jpeg');
+        grid-area: c;
+    }
+
+    .d {
+        justify-content: space-between;
+        background-image: url('./card-example-6.jpeg');
+        grid-area: d;
+
+        button {
+            background-color: rgb(44, 111, 255);
+        }
+    }
+
+    .e {
+        grid-area: e;
+        justify-content: space-between;
+        background-image: url('./card-example-5.jpeg');
+    }
+
+
+/* 
+    @media (500px <=width < 640px) {
+        section {
+            height: fit-content;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-areas:
+                "a b"
+                "c d"
+                "e e";
+            gap: 1rem;
+        }
+    } */
+    @media (min-width:500px) and (max-width: 640px) {
+        section {
+            height: fit-content;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-areas:
+                "a b"
+                "c d"
+                "e e";
+            gap: 1rem;
+        }
+    }
+    @media (min-width:320px) and (max-width: 500px) {
+        section {
+
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            grid-template-areas:
+                "a"
+                "b"
+                "c"
+                "d"
+                "e";
+            gap: 1rem;
+        }
+
+
+    } 
+    /* @media (320px <=width < 500px) {
+        section {
+
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            grid-template-areas:
+                "a"
+                "b"
+                "c"
+                "d"
+                "e";
+            gap: 1rem;
+        }
+
+
+    }  */

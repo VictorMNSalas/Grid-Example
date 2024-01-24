@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body { 
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 2rem;
+
+         
+    }
+
+    section {
+        width: 50%;
+        display: flex;
+        gap: 2rem;
+        flex-direction: column;
+    }
+
+    details {
+        padding: 1rem 2rem;
+        border-radius: 2rem;
+        background-color: rgba(157, 157, 255, 0.275);
+
+        /* &:hover {
+            background-color: rgba(255, 255, 255, 0.632);
+        } */
+
+        &[open] {
+            box-shadow: -10px 0 0 rgba(157, 157, 255, 0.632);
+            border-radius: 0rem 2rem 0rem 2rem;
+        }
+
+        svg {
+            width: 2.25rem;
+            height: 2.25rem;
+            padding: 1rem;
+            color: white;
+            border-radius: 1rem;
+            background-color: rgba(157, 157, 255, 0.632);
+        }
+    }
+
+    details:first-child {
+        svg {
+            background-color: rgb(164, 248, 143);
+        }
+
+        background-color: rgb(212, 255, 201);
+
+        &[open] {
+            box-shadow: -10px 0 0 rgb(164, 248, 143);
+            border-radius: 0rem 2rem 0rem 2rem;
+        }
+    }
+
+    details:last-child {
+        background-color: rgb(201, 251, 255);
+
+        svg {
+            background-color: rgb(153, 248, 255);
+        }
+
+        &[open] {
+            box-shadow: -10px 0 0 rgb(153, 248, 255);
+            border-radius: 0rem 2rem 0rem 2rem;
+        }
+    }
+
+    summary {
+        cursor: pointer;
+        list-style: none;
+        /*remove the arrow*/
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+</style>
+
+<body>
+
+    <section>
+        <details open>
+            <summary>Esto es antiguo</summary>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto iure a sunt ducimus perspiciatis, at
+                veniam rerum nemo est rem unde, placeat commodi ad pariatur aliquid corrupti fuga. Fugiat, corporis!</p>
+        </details>
+        <details>
+            <summary>Esto es antiguo</summary>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto iure a sunt ducimus perspiciatis, at
+                veniam rerum nemo est rem unde, placeat commodi ad pariatur aliquid corrupti fuga. Fugiat, corporis!</p>
+        </details>
+        <details>
+            <summary>Esto es antiguo</summary>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto iure a sunt ducimus perspiciatis, at
+                veniam rerum nemo est rem unde, placeat commodi ad pariatur aliquid corrupti fuga. Fugiat, corporis!</p>
+        </details>
+    </section>
+
+    <section>
+        <details open name="info">
+            <summary><svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor"
+                    viewBox="0 0 256 256">
+                    <rect width="256" height="256" fill="none"></rect>
+                    <path
+                        d="M192,120h27.05573a8,8,0,0,0,7.15542-4.42229l18.40439-36.80878a8,8,0,0,0-3.18631-10.52366L192,40"
+                        fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="16"></path>
+                    <path
+                        d="M64,120H36.94427a8,8,0,0,1-7.15542-4.42229L11.38446,78.76893a8,8,0,0,1,3.18631-10.52366L64,40"
+                        fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="16"></path>
+                    <path d="M160,40a32,32,0,0,1-64,0H64V208a8,8,0,0,0,8,8H184a8,8,0,0,0,8-8V40Z" fill="none"
+                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
+                </svg>
+                <strong>Test Styles</sTYLe></strong>
+            </summary>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quae maxime deleniti eos dolor? Illo sint
+                reprehenderit ratione natus, incidunt blanditiis earum illum accusantium est voluptatem dolorem
+                cupiditate, repellendus expedita?
+                Dolore similique ipsum odio quam reprehenderit dolor quod libero iusto aperiam dignissimos, facilis,
+                corrupti, deserunt voluptates harum cumque? Quaerat inventore ad id omnis sed ex laudantium cupiditate
+                eos nesciunt. Maiores!
+                Repellendus dolorem facilis facere iusto inventore, quos commodi quaerat architecto eveniet sit ut, modi
+                quia eos adipisci totam. Nihil, nisi! Odit nostrum unde blanditiis corporis iure illo provident minus
+                expedita.F</p>
+        </details>
+        <details name="info">
+            <summary><svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor"
+                    viewBox="0 0 256 256">
+                    <rect width="256" height="256" fill="none"></rect>
+                    <path
+                        d="M192,120h27.05573a8,8,0,0,0,7.15542-4.42229l18.40439-36.80878a8,8,0,0,0-3.18631-10.52366L192,40"
+                        fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="16"></path>
+                    <path
+                        d="M64,120H36.94427a8,8,0,0,1-7.15542-4.42229L11.38446,78.76893a8,8,0,0,1,3.18631-10.52366L64,40"
+                        fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="16"></path>
+                    <path d="M160,40a32,32,0,0,1-64,0H64V208a8,8,0,0,0,8,8H184a8,8,0,0,0,8-8V40Z" fill="none"
+                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
+                </svg>
+                <strong>Test Styles</sTYLe></strong>
+            </summary>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quae maxime deleniti eos dolor? Illo sint
+                reprehenderit ratione natus, incidunt blanditiis earum illum accusantium est voluptatem dolorem
+                cupiditate, repellendus expedita?
+                Dolore similique ipsum odio quam reprehenderit dolor quod libero iusto aperiam dignissimos, facilis,
+                corrupti, deserunt voluptates harum cumque? Quaerat inventore ad id omnis sed ex laudantium cupiditate
+                eos nesciunt. Maiores!
+                Repellendus dolorem facilis facere iusto inventore, quos commodi quaerat architecto eveniet sit ut, modi
+                quia eos adipisci totam. Nihil, nisi! Odit nostrum unde blanditiis corporis iure illo provident minus
+                expedita.F</p>
+        </details>
+        <details name="info">
+            <summary>
+                <svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor"
+                    viewBox="0 0 256 256">
+                    <rect width="256" height="256" fill="none"></rect>
+                    <path
+                        d="M192,120h27.05573a8,8,0,0,0,7.15542-4.42229l18.40439-36.80878a8,8,0,0,0-3.18631-10.52366L192,40"
+                        fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="16"></path>
+                    <path
+                        d="M64,120H36.94427a8,8,0,0,1-7.15542-4.42229L11.38446,78.76893a8,8,0,0,1,3.18631-10.52366L64,40"
+                        fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="16"></path>
+                    <path d="M160,40a32,32,0,0,1-64,0H64V208a8,8,0,0,0,8,8H184a8,8,0,0,0,8-8V40Z" fill="none"
+                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
+                </svg>
+                <strong>Test Front CSS</strong>
+            </summary>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quae maxime deleniti eos dolor? Illo sint
+                reprehenderit ratione natus, incidunt blanditiis earum illum accusantium est voluptatem dolorem
+                cupiditate, repellendus expedita?
+                Dolore similique ipsum odio quam reprehenderit dolor quod libero iusto aperiam dignissimos, facilis,
+                corrupti, deserunt voluptates harum cumque? Quaerat inventore ad id omnis sed ex laudantium cupiditate
+                eos nesciunt. Maiores!
+                Repellendus dolorem facilis facere iusto inventore, quos commodi quaerat architecto eveniet sit ut, modi
+                quia eos adipisci totam. Nihil, nisi! Odit nostrum unde blanditiis corporis iure illo provident minus
+                expedita.F</p>
+        </details>
+    </section>    <a href="./grid.html">Go</a>
+</body>
+
+</html>
